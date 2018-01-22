@@ -1,2 +1,3 @@
 # PI-STR-for-Quadrotor
-# Maintained by Wenchao Lei, e-mail: wcleithinking@gmail.com
+# Maintained by Wenchao Lei
+# E-Mail: wcleithinking@gmail.com
