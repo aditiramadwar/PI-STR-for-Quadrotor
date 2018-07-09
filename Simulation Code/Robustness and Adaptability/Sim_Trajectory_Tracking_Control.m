@@ -412,6 +412,12 @@ for t = 1:N+1
                     u_design(:,t) = u_c2(:,t);
                 end
         end
+        % filter
+        u_temp = u_design(:,t);
+        cf = 0.910;
+        if t_now>=h_sample
+            u_design(:,t) = cf*u_temp + (1-cf)*u_design(:,t-period_t);
+        end
         % design PWM signals
         PWM(:,t) = u_mix*u_design(:,t) + throttle*ones(4,1);
         PWM(:,t) = min( max( PWM(:,t),PWM_min ), PWM_max);
